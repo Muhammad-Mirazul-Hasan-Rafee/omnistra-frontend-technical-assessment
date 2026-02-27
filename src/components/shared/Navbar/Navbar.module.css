@@ -1,0 +1,153 @@
+
+
+.navbarContainer {
+  width: 100%;
+  background: black;
+}
+
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  background: black;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animation */
+.marqueeTrack {
+  display: flex;
+  width: max-content;
+  animation: marqueeMove 102s linear infinite;
+ 
+}
+
+/* Hover -> pause */
+.marqueeTrack:hover {
+  animation-play-state: paused;
+}
+
+/* content row of marquee */
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 40px;
+  white-space: nowrap;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+/* Color and font */
+.marqueeContent strong {
+  color: rgb(195, 249, 103);
+  font-weight: bold;
+  font-size: 14px;
+   text-transform: uppercase;
+}
+
+
+.navLightIcon {
+  width: 19px;
+  height: 15px;
+  color: white; 
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+
+.navCornerIcon {
+  width: 20px;
+  height: 20px;
+  color: rgb(195, 249, 103); 
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* marquee animation*/
+@keyframes marqueeMove {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.navMain {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 18px 40px;
+  background: black;
+}
+
+/* LEFT */
+.logoRow {
+  height: 12.35px;
+  width: 67.8833px;
+  line-height: 14.8167px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  color: white;
+  font-size: 8.81667px;
+  box-sizing: border-box;
+  justify-self: start;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* CENTER - TRUE CENTER */
+.navMiddleContainer {
+  position: static;
+  background-origin: padding-box;
+ background: rgba(255, 255, 255, 0);
+  background-image: linear-gradient(270deg, rgba(231, 236, 255, 0.19) 0%, rgba(231, 236, 255, 0) 50%);
+  justify-self: center;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  background: #1f1f1f;
+  padding: 12px 28px;
+  border-radius: 40px;
+}
+
+.navMiddleContainer a {
+  font-size: 8.81667px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navMiddleContainer a:hover {
+  color: white;
+}
+
+/* RIGHT */
+.navRightBtns {
+  justify-self: end;
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons */
+.signIn {
+  background: transparent;
+  border: 1px solid #444;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.signUp {
+  background: rgb(195, 249, 103);
+  border: none;
+  color: black;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
